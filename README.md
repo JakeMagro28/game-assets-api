@@ -6,7 +6,7 @@ This is a FastAPI-based backend application for handling game assets like sprite
 
 ## 🚀 Features
 
-- Upload and retrieve sprites, audio, and player scores
+- Upload, retrieve, and delete sprites, audio, and player scores
 - Credentials securely stored using `.env`
 - Fully documented with Swagger UI
 - Ready for deployment
@@ -60,14 +60,17 @@ API Endpoint overview
 sprites 
 POST /upload_sprite -Upload a sprite
 GET /sprites -Get all sprites
+DELETE /delete_sprite/{sprite_id} – Delete a sprite by ID
 
 Audio 
 POST /upload_audio -Upload an audio asset
 GET /audio -Get all audio entries
+DELETE /delete_audio/{audio_id} – Delete an audio entry by ID
 
 Scores
 POST /player_score -submit a player score
 GET /player_scores  -Get all player scores
+DELETE /delete_score/{score_id} – Delete a score entry by ID
 
 
 Security 
